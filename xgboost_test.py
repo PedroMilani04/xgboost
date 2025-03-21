@@ -66,14 +66,6 @@ xgb_clf = XGBClassifier(**params)
 # fit the classifier to the training data
 xgb_clf.fit(X_train, y_train)
 
-#XGBClassifier(alpha=10, base_score=0.5, booster='gbtree', colsample_bylevel=1,
-#       colsample_bynode=1, colsample_bytree=1, gamma=0, learning_rate=1.0,
-#       max_delta_step=0, max_depth=4, min_child_weight=1, missing=None,
-#       n_estimators=100, n_jobs=1, nthread=None,
-#       objective='binary:logistic', random_state=0, reg_alpha=0,
-#       reg_lambda=1, scale_pos_weight=1, seed=None, silent=None,
-#      subsample=1, verbosity=1)
-
 
 # make predictions on test data
 y_pred = xgb_clf.predict(X_test)
@@ -81,7 +73,6 @@ y_pred = xgb_clf.predict(X_test)
 # check accuracy scorefrom 
 print('XGBoost model accuracy score: {0:0.4f}'. format(accuracy_score(y_test, y_pred)))
 
-# XGBoost model accuracy score: 0.9167 (91.67%)
 params = {"objective":"binary:logistic",'colsample_bytree': 0.3,'learning_rate': 0.1,
                 'max_depth': 5, 'alpha': 10}
 
