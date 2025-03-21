@@ -81,5 +81,5 @@ xgb_cv = cv(dtrain=data_dmatrix, params=params, nfold=3,
 
 
 xgb.plot_importance(xgb_clf, importance_type="weight")
-plt.rcParams['figure.figsize'] = [10, 4]
+plt.rcParams['figure.figsize'] = [20, 10]
 plt.show()
